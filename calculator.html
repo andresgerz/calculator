@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/calculator.css">
+    <script type="text/javascript" src="js/calculator.js"></script>
+  </head>
+  <body>
+    
+    <table border="5" width=15%>
+      <tr>
+        <td colspan="4" align = "center">
+          <input name="display" type="text" class="color_display" id="display" size="25">
+        </td>
+      </tr>
+      <tr>
+        <td width=25%> <input name="button" type="button" class="number" id="button" value="+" onClick="equals()"> </td>
+        <td width=25%> <input name="button2" type="button" class="number" id="button2" value="-" onClick="substraction()"> </td>
+        <td width=25%> <input name="button3" type="button" class="number" id="button3" value="*"> </td>
+        <td width=25%> <input name="button4" type="button" class="number" id="button4" value="/"> </td>
+      </tr>
+      <tr>
+        <td> <input name="nro7" type="button" class="number" id="nro7" value="7" onClick="display_numbers(7)"> </td>
+        <td> <input name="nro8" type="button" class="number" id="nro8" value="8" onClick="display_numbers(8)"> </td>
+        <td> <input name="nro9" type="button" class="number" id="nro9" value="9" onClick="display_numbers(9)"> </td>
+        <td> &nbsp; </td>
+      </tr>
+      <tr>
+        <td> <input name="nro4" type="button" class="number" id="nro4" value="4" onClick="display_numbers(4)"> </td>
+        <td> <input name="nro5" type="button" class="number" id="nro5" value="5" onClick="display_numbers(5)"> </td>
+        <td> <input name="nro6" type="button" class="number" id="nro6" value="6" onClick="display_numbers(6)"> </td>
+        <td> &nbsp; </td>
+      </tr>
+      <tr>
+        <td> <input name="nro1" type="button" class="number" id="nro1" value="1" onClick="display_numbers(1)"> </td>
+        <td> <input name="nro2" type="button" class="number" id="nro2" value="2" onClick="display_numbers(2)"> </td>
+        <td> <input name="nro3" type="button" class="number" id="nro3" value="3" onClick="display_numbers(3)"> </td>
+        <td> &nbsp; </td>
+      </tr>
+      <tr>
+        <td> <input name="nro0" type="button" class="number" id="nro0" value="0" onClick="display_numbers(0)"> </td>
+        <td> <input name="button17" type="button" class="number" id="button17" value=","> </td>
+        <td colspan = "2" > <input name="button12" type="button" class="equals" id="button12" value="=" onClick="result()"> </td>
+      </tr>
+    </table>
+    <script>document.getElementById("display").value=0;
+      </script>
+  </body>
+</html>

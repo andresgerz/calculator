@@ -1,0 +1,39 @@
+table{
+  margin: auto;
+  background-color: midnightblue;
+  border-radius: 10px;
+  padding: 2em;
+
+}
+
+.color_display{
+  height: 1.5em;
+  background-color: black;  
+  color: darkorange;
+  font-size: 1.5em;
+  text-align: right;
+  padding: 1.5em;
+}
+
+.number{
+  width: 8em;
+  height: 5em;
+}
+
+.equals{
+  width: 16.5em;
+  height: 5em;
+}
+
+table tr td{
+  background-color: skyblue;
+  border-radius: 10px;
+
+}
+
+
+input{
+  background-color: lightsteelblue;
+  border-radius: 10px;
+  
+}
