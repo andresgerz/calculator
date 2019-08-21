@@ -1,3 +1,44 @@
+/* Reset CSS */
+
+html,body,h1,h2,h3,h4,h5,h6,p,ol,ul,li,pre,code,address,form,
+fieldset,blockquote,header,footer,section,aside,nav,div,a{
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+table{
+  height: 700px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th, caption{
+  font-weight: normal;
+  text-align: left;
+}
+
+ol{
+  margin-left: 1.4em;
+  list-style: decimal;
+}
+
+ul{
+  margin-left: 1.4em;
+  list-style: square;
+}
+
+img, fieldset{
+  border: 0;
+}
+
+q:before, q:after{
+  content: '';
+}
+
+/* ================================================================================================================= */
+
 table{
   margin: auto;
   background-color: midnightblue;
@@ -6,29 +47,27 @@ table{
 
 }
 
-.color_display{
-  height: 1.5em;
-  background-color: black;  
-  color: darkorange;
-  font-size: 1.5em;
+.displayCalculator{
+  height: 40px;
+  color: orange;
   text-align: right;
   padding: 1.5em;
 }
 
 .number{
-  width: 8em;
-  height: 5em;
+  width: 40px;
+  height: 50px;
 }
 
 .equals{
-  width: 16.5em;
-  height: 5em;
+  width: 16px;
+  height: 50px;
 }
 
 table tr td{
   background-color: skyblue;
   border-radius: 10px;
-
+  font-size: 60px;
 }
 
 

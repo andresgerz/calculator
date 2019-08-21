@@ -3,48 +3,58 @@
   <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
+    <link rel="shortcut icon" href="images/calculator-solid.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <script type="text/javascript" src="js/calculator.js"></script>
   </head>
   <body>
     
-    <table border="5" width=15%>
+    <table class="w-50 mt-5 border border-dark">
       <tr>
-        <td colspan="4" align = "center">
-          <input name="display" type="text" class="color_display" id="display" size="25">
+        <td colspan="4">
+          <input name="display" type="text" class="displayCalculator w-100 bg-dark display-4" id="display">
         </td>
       </tr>
       <tr>
-        <td width=25%> <input name="button" type="button" class="number" id="button" value="+" onClick="equals()"> </td>
-        <td width=25%> <input name="button2" type="button" class="number" id="button2" value="-" onClick="substraction()"> </td>
-        <td width=25%> <input name="button3" type="button" class="number" id="button3" value="*"> </td>
-        <td width=25%> <input name="button4" type="button" class="number" id="button4" value="/"> </td>
+        <td width=25%> <input name="button" type="button" class="btn-block btn-primary" id="button" value="+" onClick="equals()"> </td>
+        <td width=25%> <input name="button2" type="button" class="btn-block btn-primary" id="button2" value="-" onClick="subtraction()"> </td>
+        <td width=25%> <input name="button3" type="button" class="btn-block btn-primary" id="button3" value="*" onClick="multiply()"> </td>
+        <td width=25%> <input name="button4" type="button" class="btn-block btn-primary" id="button4" value="/"> </td>
       </tr>
       <tr>
-        <td> <input name="nro7" type="button" class="number" id="nro7" value="7" onClick="display_numbers(7)"> </td>
-        <td> <input name="nro8" type="button" class="number" id="nro8" value="8" onClick="display_numbers(8)"> </td>
-        <td> <input name="nro9" type="button" class="number" id="nro9" value="9" onClick="display_numbers(9)"> </td>
-        <td> &nbsp; </td>
+        <td> <input name="nro7" type="button" class="btn-block btn-primary" id="nro7" value="7" onClick="display_numbers(7)"> </td>
+        <td> <input name="nro8" type="button" class="btn-block btn-primary" id="nro8" value="8" onClick="display_numbers(8)"> </td>
+        <td> <input name="nro9" type="button" class="btn-block btn-primary" id="nro9" value="9" onClick="display_numbers(9)"> </td>
+        <td> <input name="ac" type="button" class="btn-block btn-danger" id="ac" value="AC" onClick="ac()" > </td>
       </tr>
       <tr>
-        <td> <input name="nro4" type="button" class="number" id="nro4" value="4" onClick="display_numbers(4)"> </td>
-        <td> <input name="nro5" type="button" class="number" id="nro5" value="5" onClick="display_numbers(5)"> </td>
-        <td> <input name="nro6" type="button" class="number" id="nro6" value="6" onClick="display_numbers(6)"> </td>
-        <td> &nbsp; </td>
+        <td> <input name="nro4" type="button" class="btn-block btn-primary" id="nro4" value="4" onClick="display_numbers(4)"> </td>
+        <td> <input name="nro5" type="button" class="btn-block btn-primary" id="nro5" value="5" onClick="display_numbers(5)"> </td>
+        <td> <input name="nro6" type="button" class="btn-block btn-primary" id="nro6" value="6" onClick="display_numbers(6)"> </td>
+        <td> <input name="power" type="button" id="" class="btn-block btn-primary" value="x²" > </td>
       </tr>
       <tr>
-        <td> <input name="nro1" type="button" class="number" id="nro1" value="1" onClick="display_numbers(1)"> </td>
-        <td> <input name="nro2" type="button" class="number" id="nro2" value="2" onClick="display_numbers(2)"> </td>
-        <td> <input name="nro3" type="button" class="number" id="nro3" value="3" onClick="display_numbers(3)"> </td>
-        <td> &nbsp; </td>
+        <td> <input name="nro1" type="button" class="btn-block btn-primary" id="nro1" value="1" onClick="display_numbers(1)"> </td>
+        <td> <input name="nro2" type="button" class="btn-block btn-primary" id="nro2" value="2" onClick="display_numbers(2)"> </td>
+        <td> <input name="nro3" type="button" class="btn-block btn-primary" id="nro3" value="3" onClick="display_numbers(3)"> </td>
+        <td> <input name="root" type="button" class="btn-block btn-primary" value="√"> </td>
       </tr>
       <tr>
-        <td> <input name="nro0" type="button" class="number" id="nro0" value="0" onClick="display_numbers(0)"> </td>
-        <td> <input name="button17" type="button" class="number" id="button17" value=","> </td>
-        <td colspan = "2" > <input name="button12" type="button" class="equals" id="button12" value="=" onClick="result()"> </td>
+        <td> <input name="nro0" type="button" class="btn-block btn-primary" id="nro0" value="0" onClick="display_numbers(0)"> </td>
+        <td> <input name="button17" type="button" class="btn-block btn-primary" id="button17" value=","> </td>
+        <td colspan = "2" > <input name="button12" type="button" class="btn-block btn-primary" id="button12" value="=" onClick="result()"> </td>
       </tr>
     </table>
     <script>document.getElementById("display").value=0;
       </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
   </body>
 </html>
